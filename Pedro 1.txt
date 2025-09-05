@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICHEU</title>
+    <style>
+        /* Estilo Geral */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(255,0,0,0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff4c4c;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Grid de Produtos */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .product-item {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #ff0000;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-item p {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 0;
+        }
+
+        /* Neon Vermelho no Hover */
+        .product-item:hover {
+            transform: scale(1.03);
+            box-shadow:
+                0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 0 40px #ff0000,
+                0 0 60px #ff0000;
+            animation: neonPulse 1.5s infinite alternate;
+        }
+
+        @keyframes neonPulse {
+            from {
+                box-shadow:
+                    0 0 10px #ff0000,
+                    0 0 20px #ff0000,
+                    0 0 40px #ff0000,
+                    0 0 60px #ff0000;
+            }
+            to {
+                box-shadow:
+                    0 0 20px #ff1a1a,
+                    0 0 30px #ff1a1a,
+                    0 0 50px #ff1a1a,
+                    0 0 70px #ff1a1a;
+            }
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9em;
+        }
+
+        /* Animação Inicial */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .banner {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PICHEU</h1> 
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="C:\Users\aluno\Desktop\maconha não é droga\pedro\contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="https://media.pichau.com.br/media/aw_rbslider/slides/2025_-_01_a_12_set_Independ_ncia_Gamer_1980x320_V2.webp" alt="Banner Principal">
+    </div>
+
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/c/v/cv500l-water_fan-media-001_13_1_1_2.jpg" alt="PC Gamer">
+            <p>PC GAMER</p>
+        </div>
+        <div class="product-item">
+            <img src="https://www.kabum.com.br/_next/image?url=https%3A%2F%2Fimages9.kabum.com.br%2Fprodutos%2Ffotos%2F403259%2Fcadeira-gamer-corsair-tc100-relaxed-fabric-ate-120kg-com-almofadas-reclinavel-cilindro-de-gas-classe-4-preto-cf-9010051-ww_1670009326_gg.jpg" alt="Cadeira Gamer">
+            <p>CADEIRA GAMER</p>
+        </div>
+        <div class="product-item">
+            <img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/t/f/tf13d416g3600hc14cdc01.jpg" alt="Memória RAM">
+            <p>MEMÓRIA RAM</p>
+        </div>
+        <div class="product-item">
+            <img src="https://static.nagem.com.br/util/artefatos/produtos/n/n/1107111747316969/624853.jpg" alt="Notebook Gamer">
+            <p>NOTEBOOK GAMER</p>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/617uDFLVAML._AC_SX679_.jpg" alt="Placa de Vídeo">
+            <p>PLACA DE VÍDEO</p>
+        </div>
+        <div class="product-item">
+            <img src="https://m.media-amazon.com/images/I/61F3ZChalyL._AC_SX679_.jpg" alt="Processador">
+            <p>PROCESSADOR</p>
+
+            
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>Telefone: (11) 4002-8922 | Endereço: Rua Sem saída, 69, XIQUE-XIQUE, BAHIA</p>
+    </footer>
+
+</body>
+</html>
